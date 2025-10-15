@@ -1,0 +1,23 @@
+{
+  "name": "Devbox Remote Container",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".."
+  },
+  "containerEnv": {
+    "CLAUDE_CODE_OAUTH_TOKEN": "${localEnv:CLAUDE_CODE_OAUTH_TOKEN}"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "jetpack-io.devbox"
+      ]
+    }
+  },
+  "remoteUser": "devbox",
+  "mounts": [
+    "source=${localWorkspaceFolder}/,target=/code,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.config/nvim,target=/home/devbox/.config/nvim,type=bind,consistency=cached"
+  ]
+}
