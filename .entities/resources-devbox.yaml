@@ -1,0 +1,150 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: claude-code-2.0.14
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: bun-1.3.0
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: devcontainer-0.80.1
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: podman-5.6.2
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: podman-compose-1.5.0
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: git-2.51.0
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vale-3.12.0
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: lychee-0.20.1
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: prettier-3.6.2
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: markdownlint-cli2-0.18.1
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: nodejs-slim-24.10.0
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jq-1.8.1
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: teller-2.0.7
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: yq-go-4.48.1
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: go-task-3.45.4
+  description: Devbox Dependency
+spec:
+  type: cli
+  owner: platform
+  system: platform
+---

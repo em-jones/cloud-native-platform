@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.16.0/.schema/devbox.schema.json",
+  "packages": [
+    "claude-code@latest",
+    "bun@latest",
+    "devcontainer@latest",
+    "podman-compose@latest",
+    "git@latest",
+    "vale@latest",
+    "lychee@latest",
+    "prettier@latest",
+    "markdownlint-cli2@latest",
+    "nodejs-slim@latest",
+    "jq@latest",
+    "teller@latest",
+    "yq-go@latest",
+    "go-task@latest",
+    "neovim@latest",
+    "uv@latest",
+    "python@latest"
+  ],
+  "env": {
+    "UV_TOOL_DIR": "$VENV_DIR",
+    "PATH":        "$PATH:$VENV_DIR/specify-cli/bin"
+  },
+  "shell": {
+    "init_hook": [
+      "./init.sh",
+      "env | grep -q \"fish\" && . $VENV_DIR/bin/activate.fish || . $VENV_DIR/bin/activate"
+    ],
+    "scripts": {
+      "test": [
+        "echo \"Error: no test specified\" && exit 1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: users
+  description: Users of the project
+spec:
+  type: stakeholder-group
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: contributors
+  description: All contributors to the project
+spec:
+  type: stakeholder-group
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: delivery
+  description: Software delivery concerns
+spec:
+  owner: contributors
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: cloud-infra
+  description: Cloud infrastructure concerns
+spec:
+  owner: contributors
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: cloud-ops
+  description: The Cloud Operations System
+spec:
+  owner: contributors
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: local-dev
+  description: Tools used for local development
+spec:
+  owner: contributors
+  type: feature-set

@@ -1,0 +1,13 @@
+{
+  "name": "cloud-native-platform",
+  "version": "0.0.1",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "directories": {
+    "docs": "docs"
+  },
+  "scripts": {
+    "format:docs": "remark . --frail --output --quiet"
+  }
+}

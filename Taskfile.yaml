@@ -1,0 +1,30 @@
+version: "3"
+tasks:
+  dev:backstage:
+    desc: Start Backstage for local development
+    cmds:
+      - cd backstage && corepack yarn && corepack yarn dev
+  lint:repo-docs:
+    desc: Lint the root-level documentation and ADR files
+    cmds:
+      - markdownlint docs/
+    silent: true
+  lint:cdk-docs:
+    desc: Lint the CDK documentation files
+    cmds:
+      - markdownlint packages/cdk/docs
+    silent: true
+  docs:devbox-resources:
+    desc: Generate Backstage resources for devbox dependencies
+    vars:
+      DEPS:
+        sh: devbox ls | sed -e 's/@latest//g' | awk '{print $2"-"$4}'
+    cmds:
+      - rm -f ./.entities/resources-devbox.yaml
+      - for: { var: DEPS }
+        cmd: yq '.metadata.name = "{{.ITEM}}", .metadata.description = "Devbox Dependency"' .templates/resource.yaml | yq '.spec.type = "cli"' >> ./.entities/resources-devbox.yaml && echo "---" >> ./.entities/resources-devbox.yaml
+    silent: true
+  docs:resources:
+    desc: Generate all resources
+    deps:
+      - task: gen:devbox-resources
